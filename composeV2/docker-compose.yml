@@ -1,0 +1,21 @@
+version: '2'
+services:
+  web:
+     image: httpd
+     ports:
+       - "80"
+     networks:
+       - front
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=piesoft123
+    ports:
+      - "3306"
+    networks:
+      - front
+
+networks:
+    front:
+       external:
+          name: network1
