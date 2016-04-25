@@ -14,4 +14,3 @@ networks:
      front:
        external:
          name: network1
-ds
